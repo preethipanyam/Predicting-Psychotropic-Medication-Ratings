@@ -67,6 +67,7 @@ The results of these inital models are described below.
 ### Results
 
 | Model | Train | Test | Interpretation |
+|---|---|---|---|
 |Naive Bayes| 0.35 | 0.35 | The scores were very low (0.35 for both train & test), so decided this was not the best model to optimize|
 |Logistic Regression| 0.37 | 0.37 | The scores for the logistic regression were a little better than the Naive Bayes model (0.37 for both train & test), but still low. Also not the best model to optimize|
 |Random Forest Regressor| 0.93 | 0.56 | Model was very overfit; the train accuracy is good but test accuracy is very low, so decided not to optimize| 
@@ -79,6 +80,7 @@ After running these initial models, I decided to use a RandomForestClassifier in
 A random forest classifier model also uses decision trees to predict categorical target variables. I initially tried using 10 classes for the drug rating target variable, and then tried collapsing them into 3 classes: low (1-3), medium(4-7) and high(8-10) ratings. Since the target classes were imbalanced, with the 'high' drug rating class representing about 65% of the data, class weight was used as a hyperparameter. A total of 6 hyperparameters were used for the model (class_weight, n_estimators, max_depth max_features, class_weight, oob_score, criterion). The results are shown below:
 
 | Model | Train | Test |
+|---|---|---|
 |RFC 10 classes| 0.95 | 0.63|
 |RFC 3 classes| 0.98 | 0.81 |
 
