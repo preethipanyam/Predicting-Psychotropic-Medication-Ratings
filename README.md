@@ -86,7 +86,6 @@ A random forest classifier model also uses decision trees to predict categorical
 
 The results revealed that the Random Forest Classifier model predicting 3 classes of drug ratings performed the best, so this was used as the final model. 
 
-!ConfusionMatrix
 <br>
 | Metric | Baseline | Final Model | 
 |---|---|---|
